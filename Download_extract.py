@@ -29,7 +29,7 @@ for k in BAM:
 #download THC data
 THC=['01','02','03','04','05','06','07','10','11','12','13','14','15','16','17','18','19','20','21','29','31','32','36']
 for k in THC:
-    url='http://141.35.26.215/data/Public_tar/THC:00'+k+':R01.tar' 
+    url='http://141.35.26.215/data/Public_tar/THC:00'+k+':R01.tar'
     request = requests.get(url)
     if request.status_code == 200:
         download(url)
@@ -45,7 +45,7 @@ for m in range(0,2):
                # print('bam')
                 file.extractall()
                # print('yeah')
-                shutil.copy('/home/jannis/Documents/model/Public/BAM:0{0}{1}{2}/R01/metadata.txt' .format(m,k,j),'/home/jannis/Documents/model/metadata/BAM:0{0}{1}{2}.txt' .format(m,k,j))
+                shutil.copy('Public/BAM:0{0}{1}{2}/R01/metadata.txt' .format(m,k,j),'metadata/BAM:0{0}{1}{2}.txt' .format(m,k,j))
                # print('lol')
             except OSError:
                 pass
@@ -56,7 +56,7 @@ for m in range(0,2):
             name = 'BAM:0%s%s%s:R01.tar' %(m,k,j)
             try:
 
-                shutil.copy('/home/jannis/Documents/model/Public/BAM:0{0}{1}{2}/R01/data.h5' .format(m,k,j),'/home/jannis/Documents/model/data/BAM:0{0}{1}{2}.h5' .format(m,k,j))
+                shutil.copy('Public/BAM:0{0}{1}{2}/R01/data.h5' .format(m,k,j),'data/BAM:0{0}{1}{2}.h5' .format(m,k,j))
                # print('lol')
             except OSError:
                 pass
@@ -70,7 +70,7 @@ for m in range(0,4):
                # print('bam')
                 file.extractall()
                # print('yeah')
-                shutil.copy('/home/jannis/Documents/model/Public/THC:00{0}{1}/R01/metadata.txt' .format(m,k),'/home/jannis/Documents/model/metadata/THC:00{0}{1}.txt' .format(m,k))
+                shutil.copy('Public/THC:00{0}{1}/R01/metadata.txt' .format(m,k),'metadata/THC:00{0}{1}.txt' .format(m,k))
                # print('lol')
             except OSError:
                 pass
@@ -80,7 +80,7 @@ for m in range(0,4):
     for k in range(0,10):
             name = 'THC:00%s%s:R01.tar' %(m,k)
             try:
-                shutil.copy('/home/jannis/Documents/model/Public/THC:00{0}{1}/R01/data.h5' .format(m,k),'/home/jannis/Documents/model/data/THC:00{0}{1}.h5' .format(m,k))
+                shutil.copy('Public/THC:00{0}{1}/R01/data.h5' .format(m,k),'data/THC:00{0}{1}.h5' .format(m,k))
                # print('lol')
             except OSError:
                 pass

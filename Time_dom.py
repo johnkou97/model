@@ -126,24 +126,24 @@ for i in range(31):
     mas12[i,1]=(mas2[i])/(1+q2[i])
 
 #Tidal Deformability
-m_r1=np.load('/home/jannis/Documents/pyTOVpp/results/SLy.npy')
-m_r2=np.load('/home/jannis/Documents/pyTOVpp/results/H4.npy')
-m_r3=np.load('/home/jannis/Documents/pyTOVpp/results/MS1.npy')
-m_r4=np.load('/home/jannis/Documents/pyTOVpp/results/MPA1.npy')
-m_r5=np.load('/home/jannis/Documents/pyTOVpp/results/ALF2.npy')
-m_r6=np.load('/home/jannis/Documents/pyTOVpp/results/MS1b.npy')
-m_r7=np.load('/home/jannis/Documents/pyTOVpp/results/ENG.npy')
-m_r8=np.load('/home/jannis/Documents/pyTOVpp/results/2H.npy')
+m_r1=np.load('tid_def/SLy.npy')
+m_r2=np.load('tid_def/H4.npy')
+m_r3=np.load('tid_def/MS1.npy')
+m_r4=np.load('tid_def/MPA1.npy')
+m_r5=np.load('tid_def/ALF2.npy')
+m_r6=np.load('tid_def/MS1b.npy')
+m_r7=np.load('tid_def/ENG.npy')
+m_r8=np.load('tid_def/2H.npy')
 
 
-k_l1=np.load('/home/jannis/Documents/pyTOVpp/results/k_l_SLy.npy')
-k_l2=np.load('/home/jannis/Documents/pyTOVpp/results/k_l_H4.npy')
-k_l3=np.load('/home/jannis/Documents/pyTOVpp/results/k_l_MS1.npy')
-k_l4=np.load('/home/jannis/Documents/pyTOVpp/results/k_l_MPA1.npy')
-k_l5=np.load('/home/jannis/Documents/pyTOVpp/results/k_l_ALF2.npy')
-k_l6=np.load('/home/jannis/Documents/pyTOVpp/results/k_l_MS1b.npy')
-k_l7=np.load('/home/jannis/Documents/pyTOVpp/results/k_l_ENG.npy')
-k_l8=np.load('/home/jannis/Documents/pyTOVpp/results/k_l_2H.npy')
+k_l1=np.load('tid_def/k_l_SLy.npy')
+k_l2=np.load('tid_def/k_l_H4.npy')
+k_l3=np.load('tid_def/k_l_MS1.npy')
+k_l4=np.load('tid_def/k_l_MPA1.npy')
+k_l5=np.load('tid_def/k_l_ALF2.npy')
+k_l6=np.load('tid_def/k_l_MS1b.npy')
+k_l7=np.load('tid_def/k_l_ENG.npy')
+k_l8=np.load('tid_def/k_l_2H.npy')
 
 
 
