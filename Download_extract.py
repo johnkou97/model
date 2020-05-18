@@ -34,8 +34,17 @@ for k in THC:
     if request.status_code == 200:
         download(url)
 
-os.mkdir('data')
-os.mkdir('metadata')
+if os.path.exists('data'):
+    pass
+else:
+    os.mkdir('data')
+
+if os.path.exists('metadata'):
+    pass
+else:
+    os.mkdir('metadata')
+
+
 for m in range(0,2):
     for k in range(0,10):
         for j in range(0,10):

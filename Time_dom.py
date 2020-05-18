@@ -2,6 +2,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import h5py
+import os
 def keys(f):
     return [key for key in f.keys()]
 import scipy
@@ -278,10 +279,15 @@ q=np.concatenate((q1,q2))
 mas=np.concatenate((mas1,mas2))
 
 
-np.save('lamda.npy',lamda)
-np.save('q.npy',q)
-np.save('rhM.npy',rhM)
-np.save('dtM.npy',dtM)
+if os.path.exists('results'):
+    pass
+else:
+    os.mkdir('results')
+
+np.save('results/lamda.npy',lamda)
+np.save('results/q.npy',q)
+np.save('results/rhM.npy',rhM)
+np.save('results/dtM.npy',dtM)
 
 fig1=plt.figure()
 plt.scatter(lamda,dtM)

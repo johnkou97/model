@@ -207,12 +207,12 @@ for i in range(len(eos)):
         mtov[i]=2.06
 
 
-lamda=np.load('lamda.npy')
+lamda=np.load('results/lamda.npy')
 k=(3/16)*lamda
 a=-131.7010
 zeta=k+a*mas/mtov
 
 
-np.save('mas.npy',mas)
-np.save('freq.npy',freq)
-np.save('zeta.npy',zeta)
+np.save('results/mas.npy',mas)
+np.save('results/freq.npy',freq)
+np.save('results/zeta.npy',zeta)
