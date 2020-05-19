@@ -9,4 +9,6 @@
    * or Freq_dom.ipynb
 1. Run Results.ipynb
 
+Or you can run the Results.ipynb and just check the final analysis and plots
+
 The folder tid_def contains the results from the analysis using scripts from https://github.com/johnkou97/pyTOVpp
