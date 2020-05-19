@@ -57,7 +57,8 @@ def analyze(file,mass):
 
     mx=np.where(fd==np.amax(fd))[0][0]
     freq=fq[mx]
-    return freq
+    amp=fd[mx]
+    return freq,amp
 
 
 SLy=1
@@ -130,7 +131,7 @@ for m in range(0,2):
 #analyze data for BAM
 
 freq2=np.zeros(31)
-
+amp2=np.zeros(31)
 i=0
 for m in range(0,2):
     for k in range(0,10):
@@ -141,7 +142,7 @@ for m in range(0,2):
                 dat = list(file["/rh_22"])
                 rh = np.array(file["/rh_22/%s" %dat[-1]])
 
-                freq2[i]=analyze(file,mas2[i])
+                freq2[i],amp2[i]=analyze(file,mas2[i])
 
                 i=i+1
             except OSError:
@@ -152,7 +153,7 @@ for m in range(0,2):
 
 
 freq1=np.zeros(23)
-
+amp1=np.zeros(23)
 i=0
 for m in range(0,2):
     for k in range(0,10):
@@ -163,7 +164,7 @@ for m in range(0,2):
                 dat = list(file["/rh_22"])
                 rh = np.array(file["/rh_22/Rh_l2_m2_r00400.txt" ])
 
-                freq1[i]=analyze(file,mas1[i])
+                freq1[i],amp1[i]=analyze(file,mas1[i])
 
                 i=i+1
             except OSError:
@@ -175,7 +176,7 @@ for m in range(0,2):
 freq=np.concatenate((freq1,freq2))
 mas=np.concatenate((mas1,mas2))
 eos=np.concatenate((eos1,eos2))
-
+amp=np.concatenate((amp1,amp2))
 
 #mtov for different eos
 
@@ -216,3 +217,4 @@ zeta=k+a*mas/mtov
 np.save('results/mas.npy',mas)
 np.save('results/freq.npy',freq)
 np.save('results/zeta.npy',zeta)
+np.save('results/amp.npy',amp)
