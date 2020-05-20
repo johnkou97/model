@@ -8,8 +8,7 @@ def keys(f):
 import scipy
 from scipy import signal
 from scipy.fftpack import fft, fftshift ,ifft,rfft,fftfreq,rfftfreq
-import gwpy
-from gwpy.timeseries import TimeSeries
+
 from scipy.interpolate import CubicSpline as spline
 #h5py.run_tests()
 c=2.9979e10
