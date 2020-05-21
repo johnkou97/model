@@ -5,6 +5,7 @@ import urllib.request
 import shutil
 import tarfile as tar
 import os
+import glob
 def download(url):
     filename = url.split('/')[-1]
     print('Downloading ' + url )
@@ -93,3 +94,14 @@ for m in range(0,4):
                # print('lol')
             except OSError:
                 pass
+
+
+files = glob.glob('*.tar')
+
+for f in files:
+    try:
+        os.remove(f)
+    except OSError as e:
+        pass
+
+os.rmdir('Public')
