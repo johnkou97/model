@@ -104,4 +104,4 @@ for f in files:
     except OSError as e:
         pass
 
-os.rmdir('Public')
+shutil.rmtree('Public')
