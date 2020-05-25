@@ -32,7 +32,7 @@ def fre_do(x,y,mass):
     return xf,fd
 
 
-def analyze(file,mass):
+def analyze(rh,mass):
 
 
 
@@ -141,7 +141,7 @@ for m in range(0,2):
                 dat = list(file["/rh_22"])
                 rh = np.array(file["/rh_22/%s" %dat[-1]])
 
-                freq2[i],amp2[i]=analyze(file,mas2[i])
+                freq2[i],amp2[i]=analyze(rh,mas2[i])
 
                 i=i+1
             except OSError:
@@ -163,7 +163,7 @@ for m in range(0,2):
                 dat = list(file["/rh_22"])
                 rh = np.array(file["/rh_22/Rh_l2_m2_r00400.txt" ])
 
-                freq1[i],amp1[i]=analyze(file,mas1[i])
+                freq1[i],amp1[i]=analyze(rh,mas1[i])
 
                 i=i+1
             except OSError:
